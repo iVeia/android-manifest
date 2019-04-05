@@ -2,15 +2,13 @@
 <manifest>
 
   <remote name="aosp" fetch="https://android.googlesource.com" review=""/>
+  <remote name="iveia-github" fetch="git://github.com/iVeia/" review="" revision="refs/tags/iveia-android_8_2019.1.1"/>
   <remote name="mentor-github" fetch="git://github.com/MentorEmbedded/" review=""/>
   <remote name="xilinx-github" fetch="git://github.com/Xilinx/" review=""/>
   <default remote="aosp" revision="refs/tags/android-8.1.0_r23" sync-j="4" />
   <remote  name="github" fetch="git://github.com/" />
 
   <!-- Xilinx MPSoC specific repositories -->
-  <project path="device/xilinx" name="mpsoc-android_device_xilinx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
-  <project path="linux-xlnx" name="mpsoc-linux-xlnx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
-  <project path="bootable/u-boot-xlnx" name="mpsoc-u-boot-xlnx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
   <project path="vendor/xilinx" name="mpsoc-android_vendor_xilinx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
 
   <!-- Xilinx VCU related repos -->
@@ -27,6 +25,13 @@
 
   <project path="packages/apps/Settings" name="mpsoc-android_packages_apps_settings" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" groups="pdk-fs" />
   <project path="frameworks/av" name="mpsoc-android_frameworks_av" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" groups="pdk" />
+
+  <!-- iVeia modified repositories -->
+  <project path="system/connectivity/wificond" name="android-system-connectivity-wificond" remote="iveia-github" />
+  <project path="frameworks/opt/net/wifi" name="android-frameworks-opt-net-wifi" remote="iveia-github" />
+  <project path="frameworks/native" name="android-frameworks-native" remote="iveia-github" />
+  <project path="device/xilinx" name="android-device-xilinx" remote="iveia-github" />
+  <project path="linux-iveia" name="android-linux-iveia-z8" remote="iveia-github" />
 
   <!-- Unmodified AOSP repositories -->
   <project path="build/make" name="platform/build" groups="pdk" >
@@ -381,7 +386,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" />
@@ -394,7 +398,6 @@
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/lowpan" name="platform/frameworks/opt/net/lowpan" groups="pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
@@ -584,7 +587,6 @@
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/bt" name="platform/system/bt" groups="pdk" />
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" />
-  <project path="system/connectivity/wificond" name="platform/system/connectivity/wificond" groups="pdk" />
   <project path="system/connectivity/wifilogd" name="platform/system/connectivity/wifilogd" groups="pdk" />
   <project path="system/chre" name="platform/system/chre" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
