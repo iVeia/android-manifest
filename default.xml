@@ -2,15 +2,13 @@
 <manifest>
 
   <remote name="aosp" fetch="https://android.googlesource.com" review=""/>
+  <remote name="iveia-github" fetch="git://github.com/iVeia/" review="" revision="refs/tags/iveia-android_8_2019.1.1">
   <remote name="mentor-github" fetch="git://github.com/MentorEmbedded/" review=""/>
   <remote name="xilinx-github" fetch="git://github.com/Xilinx/" review=""/>
   <default remote="aosp" revision="refs/tags/android-8.1.0_r23" sync-j="4" />
   <remote  name="github" fetch="git://github.com/" />
 
   <!-- Xilinx MPSoC specific repositories -->
-  <project path="device/xilinx" name="mpsoc-android_device_xilinx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
-  <project path="linux-xlnx" name="mpsoc-linux-xlnx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
-  <project path="bootable/u-boot-xlnx" name="mpsoc-u-boot-xlnx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
   <project path="vendor/xilinx" name="mpsoc-android_vendor_xilinx" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" />
 
   <!-- Xilinx VCU related repos -->
@@ -27,6 +25,13 @@
 
   <project path="packages/apps/Settings" name="mpsoc-android_packages_apps_settings" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" groups="pdk-fs" />
   <project path="frameworks/av" name="mpsoc-android_frameworks_av" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" groups="pdk" />
+
+  <!-- iVeia modified repositories -->
+  <project path="system/connectivity/wificond" name="android-system-connectivity-wificond" remote="iveia-github" />
+  <project path="frameworks/opt/net/wifi" name="android-frameworks-opt-net-wifi" remote="iveia-github" />
+  <project path="frameworks/native" name="android-frameworks-native" remote="iveia-github" />
+  <project path="device/xilinx" name="android-device-xilinx" remote="iveia-github" />
+  <project path="linux-iveia" name="linux-iveia-z8" remote="iveia-github" />
 
   <!-- Unmodified AOSP repositories -->
   <project path="build/make" name="platform/build" groups="pdk" >
