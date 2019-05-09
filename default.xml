@@ -27,11 +27,11 @@
   <project path="frameworks/av" name="mpsoc-android_frameworks_av" remote="mentor-github" revision="refs/tags/release_android-8_xilinx-v2018.1" groups="pdk" />
 
   <!-- iVeia modified repositories -->
-  <project path="system/connectivity/wificond" name="android-system-connectivity-wificond" remote="iveia-github" />
-  <project path="frameworks/opt/net/wifi" name="android-frameworks-opt-net-wifi" remote="iveia-github" />
-  <project path="frameworks/native" name="android-frameworks-native" remote="iveia-github" />
-  <project path="device/xilinx" name="android-device-xilinx" remote="iveia-github" />
-  <project path="linux-iveia" name="android-linux-iveia-z8" remote="iveia-github" />
+  <project path="system/connectivity/wificond" name="android-system-connectivity-wificond" remote="iveia-github" groups="iveia" />
+  <project path="frameworks/opt/net/wifi" name="android-frameworks-opt-net-wifi" remote="iveia-github" groups="iveia" />
+  <project path="frameworks/native" name="android-frameworks-native" remote="iveia-github" groups="iveia" />
+  <project path="device/xilinx" name="android-device-xilinx" remote="iveia-github" groups="iveia" />
+  <project path="linux-iveia" name="android-linux-iveia-z8" remote="iveia-github" groups="iveia" />
 
   <!-- Unmodified AOSP repositories -->
   <project path="build/make" name="platform/build" groups="pdk" >
